@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 	int i;
 
 	if(argc == 1){
-		printf("\nNot enough arguments!\nUsage ./MidiHarmonic song.midi\n");
+		printf("\nNot enough arguments!\nUsage ./AnalyzeMidi title.midi\n");
 		printf("(Second argument must be path from local directory)\n\n");
 		exit(1);
 	}

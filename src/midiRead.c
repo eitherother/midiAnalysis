@@ -261,18 +261,6 @@ void printAll(noteList notes, key pieceKey, timeSig pieceTime, char * inputFile)
 			notes.notes[i].channel);
 	}
 
-	// Optional lines to demonstrate operation of bassline extraction
-/*	bassExtract(notes, &bassLine);
-	printf("\n\n***** Bass line  *****\n");
-	for(i = 0; i < bassLine.length; i++) {
-		printf("Pitch %d  Start: %d  End: %d  Track: %d  Chan: %d\n",
-			bassLine.notes[i].pitch,
-			bassLine.notes[i].absStart,
-			bassLine.notes[i].absDuration,
-			bassLine.notes[i].track,
-			bassLine.notes[i].channel);
-	}
-*/
 	fclose(out);
 	printf("\nAnalysis has been output to %s\n\n", fileout);
 }

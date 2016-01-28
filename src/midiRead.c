@@ -152,6 +152,7 @@ void readMidi(FILE* f, key* pieceKey, timeSig* pieceTime, noteList* rv) {
 				}
 				pieceKey->keyNum = keyNum;
 				pieceKey->keyType = keyType;
+
 			}
 			else if (strcmp(pch, "Header") == 0) {
 				pch = strtok(NULL, ", ");
@@ -244,12 +245,12 @@ void printAll(noteList notes, key pieceKey, timeSig pieceTime, char * inputFile)
 	FILE* out = fopen(fileout, "w");
 
 	// print to file
-	fprintf(out, "***** Key Sig and Time Sig Info *****\n\n");
-	fprintf(out, "KeyNum (in range -7 to 7): %d, KeyType (major or minor): %d\n", pieceKey.keyNum, pieceKey.keyType);
-	fprintf(out, "Time Sig: %d / %d, Division: %d\n", pieceTime.numerator, 
-           pieceTime.denominator, pieceTime.delta);
+//	fprintf(out, "***** Key Sig and Time Sig Info *****\n\n");
+//	fprintf(out, "KeyNum (in range -7 to 7): %d, KeyType (major or minor): %d\n", pieceKey.keyNum, pieceKey.keyType);
+//	fprintf(out, "Time Sig: %d / %d, Division: %d\n", pieceTime.numerator, 
+  //         pieceTime.denominator, pieceTime.delta);
 
-	fprintf(out, "\n\n***** Pitches *****\n\n");
+	fprintf(out, "***** Pitches *****\n\n");
 	fprintf(out, "Number of Notes: %d\n\n", notes.length);
 	for (i = 0; i < notes.length; i++) {
 		fprintf(out, "Pitch %d  Start: %d  End: %d  Track: %d  Chan: %d\n",

@@ -245,10 +245,10 @@ void printAll(noteList notes, key pieceKey, timeSig pieceTime, char * inputFile)
 	FILE* out = fopen(fileout, "w");
 
 	// print to file
-//	fprintf(out, "***** Key Sig and Time Sig Info *****\n\n");
-//	fprintf(out, "KeyNum (in range -7 to 7): %d, KeyType (major or minor): %d\n", pieceKey.keyNum, pieceKey.keyType);
-//	fprintf(out, "Time Sig: %d / %d, Division: %d\n", pieceTime.numerator, 
-  //         pieceTime.denominator, pieceTime.delta);
+	fprintf(out, "***** Key Sig and Time Sig Info *****\n\n");
+	fprintf(out, "KeyNum (in range -7 to 7): %d, KeyType (major or minor): %d\n\n", pieceKey.keyNum, pieceKey.keyType);
+	fprintf(out, "Time Sig: %d / %d, Division: %d\n", pieceTime.numerator, 
+           pieceTime.denominator, pieceTime.delta);
 
 	fprintf(out, "***** Pitches *****\n\n");
 	fprintf(out, "Number of Notes: %d\n\n", notes.length);

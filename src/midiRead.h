@@ -42,4 +42,5 @@ void readMidi(FILE* f, key* pieceKey, timeSig* pieceTime, noteList* rv);
 void copyEventFields( noteEvent* a, noteEvent b );
 void printAll(noteList notes, key pieceKey, timeSig pieceTime, char* inputFile);
 
+
 #endif //MIDIREAD_H_INCLUDED 
